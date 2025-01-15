@@ -1,8 +1,5 @@
 package testCase;
 
-import java.awt.AWTException;
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,7 +16,7 @@ public class CategoryPageTest extends BaseClass {
 	GeneralUtilities gu;
 
 	@Test(priority = 1,enabled=true)
-	public void addNewCategoryAndVerifySuccessAlert() throws IOException, AWTException, InterruptedException {
+	public void addNewCategoryAndVerifySuccessAlert() throws Exception {
 		lp = new LoginPage(driver);
 		hp = lp.login(super.groceryApplicationLogin(1, 0), super.groceryApplicationLogin(1, 1));
 		cp = hp.clickOnCategoryMenu();
@@ -29,7 +26,7 @@ public class CategoryPageTest extends BaseClass {
 	}
 
 	@Test(priority=2, enabled=true)
-  public void createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage() throws IOException, AWTException, InterruptedException {
+  public void createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage() throws Exception {
 	  lp = new LoginPage(driver);
 		hp =lp.login(super.groceryApplicationLogin(1,0),super.groceryApplicationLogin(1,1));
 		cp = hp.clickOnCategoryMenu();
@@ -40,7 +37,7 @@ public class CategoryPageTest extends BaseClass {
   }
 
 	@Test(priority=3, enabled=true)
-  public void searchingCreatedCategoryAndVerifyListCategory() throws IOException {
+  public void searchingCreatedCategoryAndVerifyListCategory() throws Exception {
     lp = new LoginPage(driver);
 	hp =lp.login(super.groceryApplicationLogin(1,0),super.groceryApplicationLogin(1,1));
 	cp = hp.clickOnCategoryMenu();
@@ -50,7 +47,7 @@ public class CategoryPageTest extends BaseClass {
 	}
 	
 	@Test(priority=4, enabled=true)
-	  public void deletingCreatedCategoryAndVerifyDeleteAlertMessage() throws IOException {
+	  public void deletingCreatedCategoryAndVerifyDeleteAlertMessage() throws Exception {
 	    lp = new LoginPage(driver);
 		hp =lp.login(super.groceryApplicationLogin(1,0),super.groceryApplicationLogin(1,1));
 		cp = hp.clickOnCategoryMenu();
@@ -60,7 +57,7 @@ public class CategoryPageTest extends BaseClass {
 	}
 	
 	@Test(priority=5, enabled=true)
-	  public void editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert() throws IOException, InterruptedException, AWTException {
+	  public void editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert() throws Exception {
 		lp = new LoginPage(driver);
 		hp =lp.login(super.groceryApplicationLogin(1,0),super.groceryApplicationLogin(1,1));
 		cp = hp.clickOnCategoryMenu();

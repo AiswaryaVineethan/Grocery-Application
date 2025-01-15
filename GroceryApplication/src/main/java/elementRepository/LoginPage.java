@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.EncryptDecryptUtility;
+
 public class LoginPage {
 	WebDriver driver;
 	public LoginPage(WebDriver driver) {//creating constructor
@@ -32,7 +34,5 @@ public class LoginPage {
 		return alert.getText();
 		
 	}
-		
-
 
 }

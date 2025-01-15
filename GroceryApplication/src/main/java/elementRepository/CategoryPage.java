@@ -1,6 +1,7 @@
 package elementRepository;
 
 import java.awt.AWTException;
+import java.io.IOException;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -52,6 +53,13 @@ public class CategoryPage {
 	WebElement editButtonCategoryField;
 	@FindBy(xpath = "//button[text()='Update']")
 	WebElement editFieldUpdateButton;
+	
+	public static String groceryApplicationLogin(int row, int col) throws IOException {
+		String data = ExcelUtilities.readExcelData(row, col,
+				System.getProperty("user.dir") + "\\src\\main\\resources\\Excel\\GroceryApplicationData.xlsx",
+				"sheet1");
+		return data;
+	}
 
 	public void createNewCategory(String category) throws AWTException, InterruptedException {
 		newButton.click();
@@ -84,10 +92,11 @@ public class CategoryPage {
 		return firstCategoryName.getText();
 	}
 
-	public void deleteCreatedCategory() {
-		String categoryName = "SamSung_S24_Ultra_8281";
+	public void deleteCreatedCategory() throws IOException {
+	//	String categoryName = "SamSung_S24_Ultra_8281";
+		
 		for (int i = 0; i < categoryTableSize.size(); i++) {
-			if (categoryTableSize.get(i).getText().equals(categoryName)) {
+			if (categoryTableSize.get(i).getText().equals(groceryApplicationLogin(7,0))) {
 				String path = "//table//tbody//tr[" + (i + 1) + "]//td[4]//a[2]";
 				WebElement element = driver.findElement(By.xpath(path));
 				element.click();
@@ -98,10 +107,10 @@ public class CategoryPage {
 		}
 	}
 
-	public void editCreatedCategory() throws InterruptedException {
-		String categoryName = "SamSung_S24_Ultra_8281";
+	public void editCreatedCategory() throws InterruptedException, IOException {
+	//	String categoryName = "SamSung_S24_Ultra_8281";
 		for (int i = 0; i < categoryTableSize.size(); i++) {
-			if (categoryTableSize.get(i).getText().equals(categoryName)) {
+			if (categoryTableSize.get(i).getText().equals(groceryApplicationLogin(7,0))) {
 				String path = "//table//tbody//tr[" + (i + 1) + "]//td[4]//a[1]";
 				WebElement element = driver.findElement(By.xpath(path));
 				element.click();
