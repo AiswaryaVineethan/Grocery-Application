@@ -14,6 +14,7 @@ public class Constant {
 	public static final String cp_searchingCreatedCategoryAndVerifyListCategory="::Search function not working";
 	public static final String cp_deletingCreatedCategoryAndVerifyDeleteAlertMessage="::Deletion of category not working";
 	public static final String cp_editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert="::Edit Categoryfunction not working";
+	public static final String mc_editContactDetailsAndVerifySuccessAlertMessage="::Contact Us details updation not working";
 	
 
 }

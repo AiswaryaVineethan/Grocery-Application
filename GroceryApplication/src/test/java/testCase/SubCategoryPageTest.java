@@ -16,7 +16,7 @@ public class SubCategoryPageTest extends BaseClass {
 	EncryptDecryptUtility eu = new EncryptDecryptUtility();
 
 	@Test(priority = 1)
-	public void createNewSubcategory() throws Exception {
+	public void createNewSubCategoryAndVerifySuccessAlert() throws Exception {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
 		hp = lp.login(super.groceryApplicationLogin(1, 0), password);
@@ -32,7 +32,7 @@ public class SubCategoryPageTest extends BaseClass {
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
 		hp = lp.login(super.groceryApplicationLogin(1, 0), password);
 		scp = hp.clickOnSubCategoryMenu();
-		scp.editSubCategory();
+		scp.editTheFirstListedSubCategory();
 		boolean alertStatus = scp.getAlertMessage().contains("Sub Category Updated Successfully");
 		Assert.assertEquals(alertStatus, true, Constant.scp_editSubCategoryFunction);
 	}
@@ -55,7 +55,7 @@ public class SubCategoryPageTest extends BaseClass {
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
 		hp = lp.login(super.groceryApplicationLogin(1, 0), password);
 		scp = hp.clickOnSubCategoryMenu();
-		scp.deleteSubCategory();
+		scp.deleteTheFirstListedSubCategory();
 		boolean subCategoryDeleteAlertMessage = scp.getAlertMessage().contains("Sub Category Deleted Successfully");
 		Assert.assertEquals(subCategoryDeleteAlertMessage, true, Constant.scp_deleteSubCategoryFunction);	
 		
@@ -69,7 +69,7 @@ public class SubCategoryPageTest extends BaseClass {
 		scp = hp.clickOnSubCategoryMenu();
 		scp.addSubCategory();
 		hp.clickOnSubCategoryMenu();
-		scp.changeStatus();
+		scp.changeStatusOfTheFirstListedSubCategory();
 		boolean changeStatusAlertMessage = scp.getAlertMessage().contains("Sub Category Status Changed Successfully");
 		Assert.assertEquals(changeStatusAlertMessage, true, Constant.scp_changeStatus);
 		
@@ -80,7 +80,7 @@ public class SubCategoryPageTest extends BaseClass {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
 		hp = lp.login(super.groceryApplicationLogin(1, 0), password);
-		scp.changeStatus();
+		scp.changeStatusOfTheFirstListedSubCategory();
 		boolean changeStatusAlertMessage = scp.getAlertMessage().contains("Sub Category Status Changed Successfully");
 		Assert.assertEquals(changeStatusAlertMessage, true, Constant.scp_changeStatus);
 		

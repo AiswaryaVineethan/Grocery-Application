@@ -76,7 +76,7 @@ public class SubCategoryPage {
 		return alertMessage.getText();
 	}
 	
-	public void editSubCategory() {
+	public void editTheFirstListedSubCategory() {
 		String nameOfSubCategory = firstSubCategoryName.getText();
 		for (int i=0; i<subCategoryTableSize.size(); i++) {
 			if (subCategoryTableSize.get(i).getText().equals(nameOfSubCategory)) {
@@ -100,7 +100,7 @@ public class SubCategoryPage {
 		return firstSubCategoryName.getText();
 	}
 	
-	public void deleteSubCategory() {
+	public void deleteTheFirstListedSubCategory() {
 		String nameOfSubCategory = firstSubCategoryName.getText();
 		for (int i=0; i<subCategoryTableSize.size(); i++) {	
 			if (subCategoryTableSize.get(i).getText().equals(nameOfSubCategory)) {
@@ -114,7 +114,7 @@ public class SubCategoryPage {
 		}
 	}
 	
-	public void changeStatus() {
+	public void changeStatusOfTheFirstListedSubCategory() {
 		String nameOfSubCategory = firstSubCategoryName.getText();
 		for (int i=0; i<subCategoryTableSize.size(); i++) {
 			if (subCategoryTableSize.get(i).getText().equals(nameOfSubCategory)) {
