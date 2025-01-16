@@ -92,9 +92,7 @@ public class CategoryPage {
 		return firstCategoryName.getText();
 	}
 
-	public void deleteCreatedCategory() throws IOException {
-	//	String categoryName = "SamSung_S24_Ultra_8281";
-		
+	public void deleteCreatedCategory() throws IOException {		
 		for (int i = 0; i < categoryTableSize.size(); i++) {
 			if (categoryTableSize.get(i).getText().equals(groceryApplicationLogin(7,0))) {
 				String path = "//table//tbody//tr[" + (i + 1) + "]//td[4]//a[2]";
@@ -108,7 +106,6 @@ public class CategoryPage {
 	}
 
 	public void editCreatedCategory() throws InterruptedException, IOException {
-	//	String categoryName = "SamSung_S24_Ultra_8281";
 		for (int i = 0; i < categoryTableSize.size(); i++) {
 			if (categoryTableSize.get(i).getText().equals(groceryApplicationLogin(7,0))) {
 				String path = "//table//tbody//tr[" + (i + 1) + "]//td[4]//a[1]";

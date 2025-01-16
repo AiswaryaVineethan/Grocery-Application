@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-15T19:03:18 GST" name="GroceryApplication" finished-at="2025-01-15T19:04:47 GST" duration-ms="88962">
+  <suite started-at="2025-01-16T17:09:26 GST" name="GroceryApplication" finished-at="2025-01-16T17:09:33 GST" duration-ms="6593">
     <groups>
     </groups>
-    <test started-at="2025-01-15T19:03:18 GST" name="ChromeTest" finished-at="2025-01-15T19:04:47 GST" duration-ms="88962">
-      <class name="testCase.CategoryPageTest">
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:03:18 GST" name="beforeMethod" finished-at="2025-01-15T19:04:00 GST" duration-ms="42195" status="PASS">
+    <test started-at="2025-01-16T17:09:26 GST" name="ChromeTest" finished-at="2025-01-16T17:09:33 GST" duration-ms="6593">
+      <class name="testCase.LoginPageTest">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testCase.LoginPageTest@449a4f23]" started-at="2025-01-16T17:09:27 GST" name="beforeMethod" finished-at="2025-01-16T17:09:31 GST" duration-ms="4652" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,126 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="addNewCategoryAndVerifySuccessAlert()[pri:1, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:00 GST" name="addNewCategoryAndVerifySuccessAlert" finished-at="2025-01-15T19:04:09 GST" duration-ms="9071" status="PASS">
+        <test-method signature="loginWithValidCredential()[pri:0, instance:testCase.LoginPageTest@449a4f23]" started-at="2025-01-16T17:09:31 GST" name="loginWithValidCredential" finished-at="2025-01-16T17:09:33 GST" duration-ms="1672" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewCategoryAndVerifySuccessAlert -->
-        <test-method is-config="true" signature="afterMethode(org.testng.ITestResult)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:09 GST" name="afterMethode" finished-at="2025-01-15T19:04:09 GST" duration-ms="1" status="PASS">
+        </test-method> <!-- loginWithValidCredential -->
+        <test-method is-config="true" signature="afterMethode(org.testng.ITestResult)[pri:0, instance:testCase.LoginPageTest@449a4f23]" started-at="2025-01-16T17:09:33 GST" name="afterMethode" finished-at="2025-01-16T17:09:33 GST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addNewCategoryAndVerifySuccessAlert status=SUCCESS method=CategoryPageTest.addNewCategoryAndVerifySuccessAlert()[pri:1, instance:testCase.CategoryPageTest@63376bed] output={null}]]]>
+                <![CDATA[[TestResult name=loginWithValidCredential status=SUCCESS method=LoginPageTest.loginWithValidCredential()[pri:0, instance:testCase.LoginPageTest@449a4f23] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethode -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:09 GST" name="beforeMethod" finished-at="2025-01-15T19:04:12 GST" duration-ms="2449" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage()[pri:2, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:12 GST" name="createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage" finished-at="2025-01-15T19:04:19 GST" duration-ms="7210" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage -->
-        <test-method is-config="true" signature="afterMethode(org.testng.ITestResult)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:19 GST" name="afterMethode" finished-at="2025-01-15T19:04:19 GST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage status=SUCCESS method=CategoryPageTest.createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage()[pri:2, instance:testCase.CategoryPageTest@63376bed] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethode -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:19 GST" name="beforeMethod" finished-at="2025-01-15T19:04:22 GST" duration-ms="2442" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="searchingCreatedCategoryAndVerifyListCategory()[pri:3, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:22 GST" name="searchingCreatedCategoryAndVerifyListCategory" finished-at="2025-01-15T19:04:24 GST" duration-ms="2595" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchingCreatedCategoryAndVerifyListCategory -->
-        <test-method is-config="true" signature="afterMethode(org.testng.ITestResult)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:24 GST" name="afterMethode" finished-at="2025-01-15T19:04:24 GST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=searchingCreatedCategoryAndVerifyListCategory status=SUCCESS method=CategoryPageTest.searchingCreatedCategoryAndVerifyListCategory()[pri:3, instance:testCase.CategoryPageTest@63376bed] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethode -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:24 GST" name="beforeMethod" finished-at="2025-01-15T19:04:27 GST" duration-ms="2446" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="deletingCreatedCategoryAndVerifyDeleteAlertMessage()[pri:4, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:27 GST" name="deletingCreatedCategoryAndVerifyDeleteAlertMessage" finished-at="2025-01-15T19:04:31 GST" duration-ms="4385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deletingCreatedCategoryAndVerifyDeleteAlertMessage -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:31 GST" name="beforeMethod" finished-at="2025-01-15T19:04:33 GST" duration-ms="2321" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="afterMethode(org.testng.ITestResult)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:31 GST" name="afterMethode" finished-at="2025-01-15T19:04:31 GST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=deletingCreatedCategoryAndVerifyDeleteAlertMessage status=SUCCESS method=CategoryPageTest.deletingCreatedCategoryAndVerifyDeleteAlertMessage()[pri:4, instance:testCase.CategoryPageTest@63376bed] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethode -->
-        <test-method signature="editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert()[pri:5, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:33 GST" name="editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert" finished-at="2025-01-15T19:04:47 GST" duration-ms="13242" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert -->
-        <test-method is-config="true" signature="afterMethode(org.testng.ITestResult)[pri:0, instance:testCase.CategoryPageTest@63376bed]" started-at="2025-01-15T19:04:47 GST" name="afterMethode" finished-at="2025-01-15T19:04:47 GST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert status=SUCCESS method=CategoryPageTest.editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert()[pri:5, instance:testCase.CategoryPageTest@63376bed] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethode -->
-      </class> <!-- testCase.CategoryPageTest -->
+      </class> <!-- testCase.LoginPageTest -->
     </test> <!-- ChromeTest -->
   </suite> <!-- GroceryApplication -->
 </testng-results>

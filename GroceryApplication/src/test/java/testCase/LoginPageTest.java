@@ -9,16 +9,19 @@ import org.testng.annotations.Test;
 import constant.Constant;
 import elementRepository.HomePage;
 import elementRepository.LoginPage;
+import utilities.EncryptDecryptUtility;
 
 public class LoginPageTest extends BaseClass {//Inheritance
 	LoginPage lp;//used aggregation
 	HomePage hp;//used aggregation
+	EncryptDecryptUtility eu = new EncryptDecryptUtility();
 	
   @Test(enabled=true)
   public void loginWithValidCredential() throws IOException, Exception {
 	  lp = new LoginPage(driver);//Calling constructor from LoginPage java class
 	  //hp = new HomePage(driver);//constructor need to be called first
-	  hp = lp.login(groceryApplicationLogin(1,0),groceryApplicationLogin(1,1));
+	  String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
+	  hp = lp.login(groceryApplicationLogin(1,0), password);
 	  String actual = hp.getHomePageHeading();
 	  String expected = "7rmart supermarket";
 	  Assert.assertEquals(actual, expected, Constant.lp_loginWithValidCredential);//using hard assertion to compare the actual and expected values
