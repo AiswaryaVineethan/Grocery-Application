@@ -9,6 +9,7 @@
 			<!-- <class name="testCase.LoginPageTest"></class>-->
 			<class name="testCase.ManageContactTest"></class>
 			<!--<class name="testCase.CategoryPageTest"></class>-->
+			<class name="testCase.SubCategoryPageTest"></class>
 			
 		</classes>
 	</test>
