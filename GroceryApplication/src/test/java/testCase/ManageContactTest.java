@@ -25,8 +25,7 @@ public class ManageContactTest extends BaseClass{
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
 		hp = lp.login(super.groceryApplicationLogin(1, 0), password);
 		mc = hp.clickOnManageContactMenu();
-		mc.editContactUsDetails(groceryApplicationLogin(13,1), groceryApplicationLogin(14,1), groceryApplicationLogin(15,1),
-				groceryApplicationLogin(16,1), groceryApplicationLogin(17,1));
+		mc.editContactUsDetails(groceryApplicationLogin(16,1), groceryApplicationLogin(17,1));
 		boolean alertStatus = mc.getSuccessAlertMessage().contains("Contact Updated Successfully");
 		Assert.assertEquals(alertStatus, true, Constant.mc_editContactDetailsAndVerifySuccessAlertMessage);
 		

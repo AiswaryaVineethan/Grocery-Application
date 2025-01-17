@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.ExcelUtilities;
+import utilities.FakerUtility;
 import utilities.GeneralUtilities;
 import utilities.WaitUtilities;
 
@@ -16,6 +17,7 @@ public class ManageContactPage {
 	GeneralUtilities gu = new GeneralUtilities();
 	ExcelUtilities eu = new ExcelUtilities();
 	WaitUtilities wu = new WaitUtilities();
+	FakerUtility fu = new FakerUtility();
 	
 	
 	public ManageContactPage(WebDriver driver) {
@@ -23,7 +25,7 @@ public class ManageContactPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="//table/tbody//tr//td[6]")
+	@FindBy(xpath="//table/tbody//tr//td[6]//a")
 	WebElement editButton;
 	@FindBy(xpath="//input[@id='phone']")
 	WebElement phoneFiled;
@@ -47,12 +49,23 @@ public class ManageContactPage {
 		return data;
 	}
 	
-	public void editContactUsDetails(String phonenum,String email, String address, String deliveryTime,String deliveryChargeLimit) throws InterruptedException {
+	public void editContactUsDetails(String deliveryTime,String deliveryChargeLimit) throws InterruptedException {
+		Thread.sleep(2000);
+		//gu.clickJavaScriptExector(editButton, driver);
 		editButton.click();
+		Thread.sleep(2000);
+		String phonenum = fu.generateRandomDigits(10);
+		phoneFiled.clear();
 		phoneFiled.sendKeys(phonenum);
+		String email = fu.generateEmail();
+		emailFiled.clear();
 		emailFiled.sendKeys(email);
-		addressFiled.sendKeys(address);
+		String address=fu.generateAddress();
+		addressFiled.clear();
+		addressFiled.sendKeys(address);		
+		deliveryTimeFiled.clear();
 		deliveryTimeFiled.sendKeys(deliveryTime);
+		deliveryChargeLimitFiled.clear();
 		deliveryChargeLimitFiled.sendKeys(deliveryChargeLimit);
 		gu.scrollTestUsingWindowScrollByFunction(driver, 0, 1500);
 		Thread.sleep(2000);
