@@ -19,7 +19,7 @@ public class ManageContactTest extends BaseClass{
 	GeneralUtilities gu;
 	EncryptDecryptUtility eu = new EncryptDecryptUtility();
 	
-  @Test
+  @Test(groups = "Smoke")
   public void editContactDetailsAndVerifySuccessAlertMessage() throws IOException, Exception {
 		lp = new LoginPage(driver);
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");

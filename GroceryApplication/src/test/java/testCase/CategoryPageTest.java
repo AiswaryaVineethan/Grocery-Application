@@ -17,7 +17,7 @@ public class CategoryPageTest extends BaseClass {
 	GeneralUtilities gu;
 	EncryptDecryptUtility eu = new EncryptDecryptUtility();
 
-	@Test(priority = 1,enabled=true)
+	@Test(priority = 1,enabled=true,groups = "Smoke")
 	public void addNewCategoryAndVerifySuccessAlert() throws Exception {
 		lp = new LoginPage(driver);
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -28,7 +28,7 @@ public class CategoryPageTest extends BaseClass {
 		Assert.assertEquals(alertStatus, true, Constant.cp_addNewCategory);
 	}
 
-	@Test(priority=2, enabled=true)
+	@Test(priority=2, enabled=true,groups = "Smoke")
   public void createDuplicateCategoryAndVerifyCategoryAlreadyExistAlertMessage() throws Exception {
 	  lp = new LoginPage(driver);
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -40,7 +40,7 @@ public class CategoryPageTest extends BaseClass {
 		
   }
 
-	@Test(priority=3, enabled=true)
+	@Test(priority=3, enabled=true,groups = "Smoke")
   public void searchingCreatedCategoryAndVerifyListCategory() throws Exception {
     lp = new LoginPage(driver);
 	String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -51,7 +51,7 @@ public class CategoryPageTest extends BaseClass {
 	Assert.assertEquals(listCategoryNameStatus, true, Constant.cp_searchingCreatedCategoryAndVerifyListCategory);	
 	}
 	
-	@Test(priority=4, enabled=true)
+	@Test(priority=4, enabled=true,groups = "Smoke")
 	  public void deletingCreatedCategoryAndVerifyDeleteAlertMessage() throws Exception {
 	    lp = new LoginPage(driver);
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -62,7 +62,7 @@ public class CategoryPageTest extends BaseClass {
 		Assert.assertEquals(alertStatus,true,Constant.cp_deletingCreatedCategoryAndVerifyDeleteAlertMessage);
 	}
 	
-	@Test(priority=5, enabled=true)
+	@Test(priority=5, enabled=true,groups = "Smoke")
 	  public void editingCreatedCategoryAndVerifyUpdatedSuccessfullyAlert() throws Exception {
 		lp = new LoginPage(driver);
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");

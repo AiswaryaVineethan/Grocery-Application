@@ -15,7 +15,7 @@ public class SubCategoryPageTest extends BaseClass {
 	SubCategoryPage scp;
 	EncryptDecryptUtility eu = new EncryptDecryptUtility();
 
-	@Test(priority = 1)
+	@Test(priority = 1,groups = "Smoke")
 	public void createNewSubCategoryAndVerifySuccessAlert() throws Exception {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -26,7 +26,7 @@ public class SubCategoryPageTest extends BaseClass {
 		Assert.assertEquals(alertStatus, true, Constant.scp_createNewSubcategory);
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 2,groups = "Smoke")
 	public void editSubCategoryFunction() throws Exception {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -37,7 +37,7 @@ public class SubCategoryPageTest extends BaseClass {
 		Assert.assertEquals(alertStatus, true, Constant.scp_editSubCategoryFunction);
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3,groups = "Smoke")
 	public void searchSubCategoryFunction() throws Exception {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -49,7 +49,7 @@ public class SubCategoryPageTest extends BaseClass {
 		
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4,groups = "Smoke")
 	public void deleteSubCategoryFunction() throws Exception {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -61,7 +61,7 @@ public class SubCategoryPageTest extends BaseClass {
 		
 	}
 	
-	@Test(priority=5)
+	@Test(priority=5,groups = "Smoke")
 	public void changeStatusActiveToInactive() throws Exception {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");
@@ -75,7 +75,7 @@ public class SubCategoryPageTest extends BaseClass {
 		
 	}
 	
-	@Test(priority=6)
+	@Test(priority=6,groups = "Smoke")
 	public void changeStatusInactiveToActive() throws Exception {
 		lp = new LoginPage(driver);// Calling constructor from LoginPage java class
 		String password = EncryptDecryptUtility.decrypt(groceryApplicationLogin(10,0), "1234567890123456");

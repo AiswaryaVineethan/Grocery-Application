@@ -16,7 +16,7 @@ public class LoginPageTest extends BaseClass {//Inheritance
 	HomePage hp;//used aggregation
 	EncryptDecryptUtility eu = new EncryptDecryptUtility();
 	
-  @Test(enabled=true)
+  @Test(enabled=true,groups = "Smoke")
   public void loginWithValidCredential() throws IOException, Exception {
 	  lp = new LoginPage(driver);//Calling constructor from LoginPage java class
 	  //hp = new HomePage(driver);//constructor need to be called first
@@ -28,7 +28,7 @@ public class LoginPageTest extends BaseClass {//Inheritance
 	  
   }
   
-  @Test(dataProvider="data-provider", enabled=false)
+  @Test(dataProvider="data-provider", enabled=false,groups = "Smoke")
   public void loginWithInvalidCredential(String username, String password) throws Exception {
 	  lp = new LoginPage(driver);//Calling constructor from LoginPage java class
 	  hp= lp.login(username,password);
