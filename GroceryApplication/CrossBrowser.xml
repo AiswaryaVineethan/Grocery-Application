@@ -1,7 +1,7 @@
-<suite name="GroceryApplication" thread-count="2" parallel="tests">
+<suite name="GroceryApplication" thread-count="5" parallel="tests">
 	<listeners>
 		<listener class-name="listener.ExtenetReport"></listener>
-		<!-- <listener class-name="listener.RetryListener"></listener>-->
+		<listener class-name="listener.RetryListener"></listener>
 	</listeners>
 
 	<test name="ChromeTest">
