@@ -31,7 +31,7 @@ public class EncryptDecryptUtility {
 		return new String(decryptedBytes);
 	}
 	
-	public static void main(String[] args) throws Exception {
+/*	public static void main(String[] args) throws Exception {
 		String key = "1234567890123456"; 
 		String originalText = "admin"; 
 		
@@ -40,5 +40,5 @@ public class EncryptDecryptUtility {
 		
 		String decryptedText = decrypt(encryptedText, key);
 		System.out.println("Decrypted Text: " + decryptedText);
-	}
+	}*/ //Main Method not needed, because we using above two methods in testcases (encrypt / decrypt)
 }
